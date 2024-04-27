@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: air_bnb
+    description: 'Dados - AirBNB - bronze'
+    database: analytics_engineering_ada
+    schema: public
+    tables:
+      - name: listings_raw
+        description: 'Dados +/- tratados airbnb'
+      - name: calendar_raw
+        description: 'Dados +/- tratados airbnb'
+      - name: reviews_raw
+        description: 'Dados +/- tratados airbnb'

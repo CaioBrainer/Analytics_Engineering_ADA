@@ -1,0 +1,12 @@
+analytics_engineer:
+  outputs:
+    dev:
+      dbname: analytics_engineering_ada
+      host: localhost
+      pass: '552277'
+      port: 5432
+      schema: public
+      threads: 1
+      type: postgres
+      user: postgres
+  target: dev

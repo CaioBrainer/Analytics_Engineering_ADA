@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: listings_bronze
+    description: "Camada bronze da tabela de resultados da airbnb"
+    columns:
+      - name: price
+        description: "price column of listings table"
+        tests:
+          - unique
+          - not_null
