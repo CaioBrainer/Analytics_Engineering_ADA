@@ -4,8 +4,12 @@ with source_reviews as (
 
 final AS (
     SELECT listing_id,
-           CAST(date AS DATE) AS date
-           FROM source_reviews
+           id,
+           CAST(date AS DATE) AS date,
+           reviewer_id,
+           reviewer_name,
+           comments
+    FROM source_reviews
 )
 
 select * from final
