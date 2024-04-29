@@ -20,6 +20,7 @@ WITH
             AND reviews_per_month IS NOT NULL
     ),
     final AS (
+<<<<<<< HEAD
         SELECT
             CAST(REPLACE(host_response_rate, '%', '') AS INTEGER) AS host_response_rate,
             CAST(REPLACE(host_acceptance_rate, '%', '') AS INTEGER) AS host_acceptance_rate,
@@ -27,6 +28,15 @@ WITH
             host_id,
             host_name,
             host_since,
+=======
+        SELECT 
+            CAST(REPLACE(host_response_rate, '%', '') AS INTEGER) AS host_response_rate,
+            CAST(REPLACE(host_acceptance_rate, '%', '') AS INTEGER) AS host_acceptance_rate,
+            id,
+            host_id, 
+            host_name, 
+            host_since, 
+>>>>>>> a614d64be6e7a87729a153b45b9e65228b0a7e09
             neighbourhood_cleansed,
             property_type,
             accommodates,
@@ -39,4 +49,8 @@ WITH
         FROM listings_bronze_notnull
     )
 
+<<<<<<< HEAD
 SELECT DISTINCT * FROM final
+=======
+SELECT DISTINCT * FROM final
+>>>>>>> a614d64be6e7a87729a153b45b9e65228b0a7e09
