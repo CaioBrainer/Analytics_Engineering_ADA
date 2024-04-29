@@ -15,6 +15,6 @@ stats_cte AS (
     FROM calendar_bronze_not
 )
 
-SELECT listing_id, price as price_dolar, price_real, data
+SELECT listing_id, price as price_dolar, price_real, data, available
 FROM calendar_bronze_not, stats_cte
 WHERE price BETWEEN avg_price - 2 * std_dev AND avg_price + 2 * std_dev
