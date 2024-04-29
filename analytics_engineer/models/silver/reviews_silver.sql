@@ -1,7 +1,7 @@
 WITH
     reviews_bronze_notnull AS (
         SELECT *
-        FROM reviews_bronze
+        FROM {{ ref('reviews_bronze') }}
         WHERE
             listing_id IS NOT NULL
             AND id IS NOT NULL
